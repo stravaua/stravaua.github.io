@@ -137,6 +137,26 @@ h4:nth-of-type(3)::before {
     content: '🌐';
 }
 
+.header-link {
+    color: inherit;
+    text-decoration: none;
+    position: relative;
+}
+
+.header-link::after {
+    display: none;
+}
+
+.header-link:hover {
+    color: inherit;
+    opacity: 0.8;
+}
+
+.header-link:hover::before {
+    content: '🔗 ';
+    margin-right: 0.5rem;
+}
+
 p {
     margin-bottom: 1.5rem;
     font-size: 1.1rem;
