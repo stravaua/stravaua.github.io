@@ -70,6 +70,12 @@
                 </ul>
             </li>
             <li><a href="#strava-ukrainian-idea-timeline">Історія боротьби за українську в Strava</a></li>
+            <li><a href="#strava-support-ukraine">Як встановити карту "Support Ukraine"</a>
+                <ul>
+                    <li><a href="#support-ukraine-activity-fix">Як встановити карту "Support Ukraine" через ActivityFix</a></li>
+                    <li><a href="#support-ukraine-strava-api">Як встановити карту "Support Ukraine", використовуючи Strava API</a></li>
+                </ul>
+            </li>
         </ul>
     </nav>
 
@@ -409,11 +415,152 @@
             </div>
         </div>
 
+        <h1 id="strava-support-ukraine">
+            <a href="#strava-support-ukraine" class="header-link">Як додати карту Support Ukraine</a>
+        </h1>
+
+        <p>
+            Наприкінці березня 2022 року Strava додала карту <a href="https://the5krunner.com/2022/03/26/strava-adds-support-ukraine-map/" target="_blank">Support Ukraine</a>, щоб підтримати Україну.
+        </p>
+        <p>
+            <a href="./images/strava_support_ukraine_map.webp" target="_blank">
+                <picture>
+                    <source srcset="./images/strava_support_ukraine_map.webp" type="image/webp">
+                    <img alt="Setting Strava Support Ukraine for a ride" src="./images/strava_support_ukraine_map.jpg" height="100%" style="max-height:200px; display:block; margin:0 auto;">
+                </picture>
+            </a>
+        </p>
+        <p>
+            Але в листопаді 2025 року ця та <a href="https://support.strava.com/hc/en-us/articles/41094037467661-Promoting-Causes-On-Strava#:~:text=Changes%20to%20Cause%2DSpecific%20Map%20Types">інші типи карт</a> зникли з додатку та сайту Strava.</a>
+            Вони були замінені на <a href="https://support.strava.com/hc/en-us/articles/41094037467661-Promoting-Causes-On-Strava">"Causes"</a>.
+            Додатково Strava дозволила вставляти посилання на сторінки підтримки справи в опис активності.
+            Але ж ми хочемо бачити карту "Support Ukraine" на своїх маршрутах!
+        </p>
+
+        <p>
+            На щастя, є можливість додавати карту Support Ukraine програмно через API.
+            Станом на кінець листопада 2025 року карти продовжують відображатися в додатку та на сайті.
+        </p>
+
+        <div class="comparison">
+            <div style="width: 30%;">
+                <div>iOS</div>
+                <a href="./images/strava_support_ukraine_map_december_2025_ios.webp" target="_blank">
+                    <picture>
+                        <source srcset="./images/strava_support_ukraine_map_december_2025_ios.webp" type="image/webp">
+                        <img alt="iOS Strava Support Ukraine for a ride in December 2025" src="./images/strava_support_ukraine_map_december_2025_ios.png" style="max-width:200px; max-height:300px;">
+                    </picture>
+                </a>
+            </div>
+            <div style="width: 70%;">
+                <div>Web</div>
+                <a href="./images/strava_support_ukraine_map_december_2025_web.webp" target="_blank">
+                    <picture>
+                        <source srcset="./images/strava_support_ukraine_map_december_2025_web.webp" type="image/webp">
+                        <img alt="Strava Support Ukraine for a ride in December 2025" src="./images/strava_support_ukraine_map_december_2025_web.png" style="max-width:400px; max-height:300px;">
+                    </picture>
+                </a>
+            </div>
+        </div>
+
+        <p>
+            Також є петиція, що закликає Strava повернути карту Support Ukraine офіційно.
+            Підтримати її можна <a href="https://communityhub.strava.com/ideas/put-the-ukraine-and-the-other-cause-maps-back-12068" target="_blank">тут</a>.
+        </p>
+
+        <h2 id="support-ukraine-activity-fix">
+            <a href="#support-ukraine-activity-fix" class="header-link">Як встановити карту "Support Ukraine" через ActivityFix</a>
+        </h2>
+
+        <p>
+            Існує сторонній веб-сайт <a href="https://www.activityfix.com/" target="_blank">ActivityFix</a>, який дозволяє редагувати активності в Strava залежно від різних параметрів.
+            Під капотом використовується Strava API. Алгоритм такий:
+        </p>
+
+        <ol>
+            <li>Залогіньтесь в <span class="highlight">ActivityFix</span> через ваш акаунт Strava.</li>
+            <li>Ліворуч на панелі "Dashboard" виберіть <span class="highlight">"Add Rule"</span>.</li>
+            <li>Введіть наступні параметри для правила:
+                <ul>
+                    <li>What would you like to call this rule: <span class="highlight">Use "Support Ukraine" map for all activities</span>.</li>
+                    <li>What should be changed: <span class="highlight">Change map type</span> to <span class="highlight">Support Ukraine</span>.</li>
+                    <li>When should it be changed: <span class="highlight">Activity type</span> is <span class="highlight">Any Activity</span>.</li>
+                    <li>If the rule matches: <span class="highlight">Yes: Continue processing remaining rules</span>.</li>
+                </ul>
+            </li>
+            <li>Натисніть <span class="highlight">"Save Rule"</span>. Воно буде додано в список правил "My Rules".
+                <a href="./images/activity_fix_my_rules.webp" target="_blank">
+                    <picture>
+                        <source srcset="./images/activity_fix_my_rules.webp" type="image/webp">
+                        <img alt="My Rules on the ActivityFix website" src="./images/activity_fix_my_rules.jpg" height="100%" style="max-height:400px; display:block; margin:0 auto;">
+                    </picture>
+                </a>
+            </li>
+            <li>Опціонально: можна перевірити правило на одній активності, натиснувши <span class="highlight">"Test Rule"</span>.</li>
+        </ol>
+
+        <p>
+            Після цього всі нові активності, які ви завантажите в Strava, автоматично отримуватимуть карту "Support Ukraine".
+        </p>
+        <p>
+            Існує можливість застосувати правило до наявних активностей, натиснувши <span class="highlight">"Process Old Activities"</span>.
+            Дивіться інструкцію на <a href="https://youtu.be/L4ZYM-ECKFI?si=CKWfUV1vQIxoFjXt" target="_blank">YouTube ActivityFix</a>.
+        </p>
+
+        <p>
+            Схожим чином можна вставлювати карту <span class="highlight">Support Ukraine</span> через інші сторонні сервіси, наприклад, <a href="https://strautomator.com/" target="_blank">Strautomator</a>.
+        </p>
+
+        <a href="./images/strautomator_add_rule.webp" target="_blank">
+            <picture>
+                <source srcset="./images/strautomator_add_rule.webp" type="image/webp">
+                <img alt="New rule on the Strautomator website" src="./images/strautomator_add_rule.png" height="100%" style="max-height:400px; display:block; margin:0 auto;">
+            </picture>
+        </a>
+
+        <h2 id="support-ukraine-strava-api">
+            <a href="#support-ukraine-strava-api" class="header-link">Як встановити карту "Support Ukraine", використовуючи Strava API</a>
+        </h2>
+
+        <p>
+            Якщо ви вмієте програмувати, можна додати карту "Support Ukraine" через Strava API,
+            використовуючи <a href="https://developers.strava.com/docs/reference/#api-Activities-updateActivityById">Update Activity</a> ендпоінт.
+            Алгоритм наступний:
+        </p>
+        <ol>
+            <li>Отримуємо <span class="highlight">токен доступу</span> по <a href="https://developers.strava.com/docs/getting-started/">інструкції</a>.</li>
+            <li>Виконуємо <span class="highlight">PUT</span> запит на ендпоінт <span class="highlight">https://www.strava.com/api/v3/activities/{activity_id}</span> з JSON тілом запиту <span class="highlight">{"selected_polyline_style":"ukraine"}</span>.</li>
+        </ol>
+
+            <div class="code-block">
+                <button class="copy-button" type="button" data-target="curl-support-ukraine">Copy</button>
+                <pre>
+<code id="curl-support-ukraine" class="language-bash">curl -X PUT "https://www.strava.com/api/v3/activities/{activity_id}" \
+  -H "Authorization: Bearer {access_token}" \
+  -H "Content-Type: application/json" \
+  -d '{"selected_polyline_style":"ukraine"}'
+</code></pre>
+            </div>
+
+            <p>
+                В запиті <span class="highlight">{access_token}</span> - токен доступу з першого кроку,
+                <span class="highlight">{activity_id}</span> - ідентифікатор активності.
+            </p>
+
+            <p>
+                Параметр <span class="highlight">selected_polyline_style</span> незадокументований і <a href="https://communityhub.strava.com/developers-api-7/changing-the-map-type-using-the-api-3101">може змінитися</a> в майбутньому.
+                Всі його значення описані <a href="https://github.com/strautomator/core/blob/a36356636a91f6c56b9392038211f5289486dfcd/src/strava/types.ts#L750-L766">тут.</a>
+            </p>
+
         <footer class="footer">
             <p>
                 Створено <a href="https://github.com/alexandear" target="_blank" rel="noopener noreferrer">Oleksandr Redko</a> © 2025
             </p>
         </footer>
     </div>
-</div></body>
+</div>
+</div>
+
+<script src="scripts.js"></script>
+</body>
 </html>
