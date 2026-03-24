@@ -539,12 +539,20 @@ details[open] summary {
     box-shadow: 0 4px 12px rgba(252, 74, 26, 0.3);
 }
 
+.timeline-content h2,
 .timeline-content h3 {
     font-size: 1.4rem;
     color: #2c3e50;
     margin: 0.5rem 0;
+    text-align: left;
+    position: static;
 }
 
+.timeline-content h2::after {
+    content: none;
+}
+
+.timeline-content h2::before,
 .timeline-content h3::before {
     content: none;
 }
