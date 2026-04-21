@@ -656,6 +656,49 @@ cite::after {
     transform: translateY(0);
 }
 
+@media (min-width: 1024px) {
+    .container {
+        display: grid;
+        grid-template-columns: minmax(0, 1fr) 340px;
+        grid-template-areas:
+            'header header'
+            'content toc';
+        align-items: start;
+    }
+
+    .header {
+        grid-area: header;
+    }
+
+    .content {
+        grid-area: content;
+    }
+
+    .toc {
+        grid-area: toc;
+        border-bottom: none;
+        border-left: 2px solid #667eea;
+    }
+
+    .toc ul {
+        max-width: none;
+        margin: 0;
+    }
+
+    .toc li {
+        margin-bottom: 0.10rem;
+        line-height: 1.10;
+    }
+
+    .toc a {
+        padding: 0.10rem 0;
+    }
+
+    .toc ul ul {
+        margin-top: 0.10rem;
+    }
+}
+
 @media (max-width: 768px) {
     .ios-content {
         flex-direction: column;
@@ -727,18 +770,25 @@ cite::after {
     }
 
     .toc {
-        padding: 1.5rem 1rem;
+        padding: 1rem 1rem;
     }
 
     .toc h2 {
-        font-size: 1.5rem;
+        font-size: 1rem;
+    }
+
+    .toc li {
+        margin-bottom: 0.1rem;
+        line-height: 1.4;
     }
 
     .toc a {
         font-size: 1rem;
+        padding: 0.1rem 0;
     }
 
     .toc ul ul {
-        margin-left: 1rem;
+        margin-top: 0.1rem;
+        margin-left: 0.8rem;
     }
 }
