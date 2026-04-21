@@ -24,12 +24,12 @@ document.addEventListener('click', function (event) {
     };
 
     const handleSuccess = () => {
-        button.innerText = 'Copied!';
+        button.innerText = 'Скопійовано!';
         setTimeout(() => (button.innerText = original), 1500);
     };
 
     const handleError = () => {
-        button.innerText = 'Error';
+        button.innerText = 'Помилка';
         setTimeout(() => (button.innerText = original), 1500);
     };
 
