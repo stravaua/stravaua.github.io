@@ -73,6 +73,87 @@ body {
     z-index: 1;
 }
 
+.premium-cta {
+    margin: 0 auto 2rem;
+    max-width: 860px;
+    background: linear-gradient(135deg, #fff8e8 0%, #fff3cf 45%, #eef4ff 100%);
+    border: 1px solid #ffd9a1;
+    border-radius: 18px;
+    padding: 1.35rem 1.25rem 1.4rem;
+    box-shadow: 0 14px 28px rgba(31, 41, 55, 0.12);
+    position: relative;
+    z-index: 2;
+    color: #1f2937;
+}
+
+.premium-cta-title {
+    margin: 0 0 0.55rem;
+    font-size: 1.35rem;
+    font-weight: 800;
+    letter-spacing: 0.01em;
+    line-height: 1.35;
+}
+
+.premium-cta-text {
+    margin: 0;
+    font-size: 1.06rem;
+    line-height: 1.65;
+    opacity: 1;
+}
+
+.premium-cta-text a {
+    color: #0c72c8;
+    font-weight: 700;
+}
+
+.premium-cta-button {
+    display: inline-flex;
+    margin-top: 1rem;
+    align-items: center;
+    justify-content: center;
+    padding: 0.74rem 1.08rem;
+    border-radius: 999px;
+    font-size: 0.98rem;
+    font-weight: 700;
+    color: #ffffff;
+    background: linear-gradient(135deg, #fc4a1a 0%, #f08822 100%);
+    border: 1px solid rgba(120, 44, 0, 0.25);
+    box-shadow: 0 8px 18px rgba(252, 74, 26, 0.35);
+    text-decoration: none;
+    transition: transform 0.2s ease, box-shadow 0.2s ease, background 0.2s ease;
+}
+
+.premium-cta-button::after {
+    display: none;
+}
+
+.premium-cta-button:hover {
+    color: #ffffff;
+    background: linear-gradient(135deg, #ff5f2f 0%, #f39a3e 100%);
+    transform: translateY(-1px);
+    box-shadow: 0 10px 22px rgba(252, 74, 26, 0.42);
+}
+
+.premium-cta-reddit-link-wrap {
+    margin: 0.95rem 0 0;
+}
+
+.premium-cta-reddit-link {
+    color: #1f4e8c;
+    font-size: 0.93rem;
+    font-weight: 600;
+    opacity: 1;
+}
+
+.premium-cta-reddit-link:hover {
+    color: #163b6c;
+    opacity: 1;
+}
+
+.premium-cta-reddit-link::after {
+    background: rgba(22, 59, 108, 0.5);
+}
+
 .toc {
     background: linear-gradient(135deg, #f5f7fa 0%, #c3cfe2 100%);
     padding: 2rem;
@@ -740,6 +821,30 @@ cite::after {
 
     .header p {
         font-size: 1rem;
+    }
+
+    .premium-cta {
+        margin: 0 auto 1.5rem;
+        padding: 1rem 0.9rem 1.1rem;
+        border-radius: 12px;
+    }
+
+    .premium-cta-title {
+        font-size: 1.12rem;
+    }
+
+    .premium-cta-text {
+        font-size: 0.98rem;
+    }
+
+    .premium-cta-button {
+        width: 100%;
+        font-size: 0.95rem;
+        padding: 0.68rem 0.9rem;
+    }
+
+    .premium-cta-reddit-link {
+        font-size: 0.9rem;
     }
 
     .content {
