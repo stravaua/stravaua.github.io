@@ -375,7 +375,19 @@ a img:hover {
     text-align: center;
 }
 
+.comparison > .comparison-narrow {
+    flex: none;
+    width: 30%;
+}
+
+.comparison > .comparison-wide {
+    flex: none;
+    width: 70%;
+}
+
 .comparison img {
+    width: 100%;
+    height: auto;
     border-radius: 10px;
     box-shadow: 0 8px 25px rgba(0,0,0,0.15);
     transition: transform 0.3s ease;
@@ -383,6 +395,27 @@ a img:hover {
 
 .comparison img:hover {
     transform: scale(1.05);
+}
+
+.comparison-narrow img {
+    width: auto;
+    max-width: 200px;
+    max-height: 300px;
+}
+
+.comparison-wide img {
+    max-width: 400px;
+    max-height: 300px;
+}
+
+.comparison-web img {
+    max-width: 600px;
+}
+
+.comparison-ios img {
+    width: auto;
+    max-width: 100%;
+    max-height: 400px;
 }
 
 .comparison > div > div {
@@ -393,10 +426,22 @@ a img:hover {
 }
 
 .settings-image {
+    width: 100%;
+    height: auto;
     border-radius: 10px;
     box-shadow: 0 8px 25px rgba(0,0,0,0.15);
-    margin: 1rem 0;
+    margin: 1rem auto;
+    max-width: 800px;
+    display: block;
     transition: transform 0.3s ease;
+}
+
+.img-centered {
+    width: 100%;
+    height: auto;
+    display: block;
+    margin: 0 auto;
+    max-width: 500px;
 }
 
 .settings-image:hover {
@@ -724,6 +769,31 @@ cite::after {
 
 .support-request-example p:last-child {
     margin-bottom: 0;
+}
+
+@media (min-width: 769px) and (max-width: 1023px) {
+    .container {
+        display: grid;
+        grid-template-columns: minmax(0, 1fr) 280px;
+        grid-template-areas:
+            'header header'
+            'content toc';
+        align-items: start;
+    }
+
+    .header {
+        grid-area: header;
+    }
+
+    .content {
+        grid-area: content;
+    }
+
+    .toc {
+        grid-area: toc;
+        border-bottom: none;
+        border-left: 2px solid var(--color-primary);
+    }
 }
 
 @media (min-width: 1024px) {
