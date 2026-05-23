@@ -1,3 +1,14 @@
+:root {
+    --color-primary: #667eea;
+    --color-primary-dark: #764ba2;
+    --color-accent: #fc4a1a;
+    --color-accent-light: #f7b733;
+    --color-text: #2c3e50;
+    --color-text-muted: #34495e;
+    --color-link: #3498db;
+    --color-danger: #e74c3c;
+}
+
 * {
     margin: 0;
     padding: 0;
@@ -8,7 +19,7 @@ body {
     font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, sans-serif;
     line-height: 1.6;
     color: #333;
-    background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+    background: linear-gradient(135deg, var(--color-primary) 0%, var(--color-primary-dark) 100%);
     min-height: 100vh;
     padding: 20px;
 }
@@ -23,7 +34,7 @@ body {
 }
 
 .header {
-    background: linear-gradient(135deg, #fc4a1a 0%, #f7b733 100%);
+    background: linear-gradient(135deg, var(--color-accent) 0%, var(--color-accent-light) 100%);
     color: white;
     padding: 1rem;
     text-align: center;
@@ -98,7 +109,6 @@ body {
     margin: 0;
     font-size: 1.06rem;
     line-height: 1.65;
-    opacity: 1;
 }
 
 .premium-cta-text a {
@@ -116,7 +126,7 @@ body {
     font-size: 0.98rem;
     font-weight: 700;
     color: #ffffff;
-    background: linear-gradient(135deg, #fc4a1a 0%, #f08822 100%);
+    background: linear-gradient(135deg, var(--color-accent) 0%, #f08822 100%);
     border: 1px solid rgba(120, 44, 0, 0.25);
     box-shadow: 0 8px 18px rgba(252, 74, 26, 0.35);
     text-decoration: none;
@@ -142,12 +152,10 @@ body {
     color: #1f4e8c;
     font-size: 0.93rem;
     font-weight: 600;
-    opacity: 1;
 }
 
 .premium-cta-reddit-link:hover {
     color: #163b6c;
-    opacity: 1;
 }
 
 .premium-cta-reddit-link::after {
@@ -158,23 +166,11 @@ body {
     background: linear-gradient(135deg, #f5f7fa 0%, #c3cfe2 100%);
     padding: 2rem;
     margin: 0;
-    border-bottom: 4px solid #667eea;
-}
-
-.toc h2 {
-    font-size: 1.8rem;
-    color: #2c3e50;
-    margin: 0 0 1.5rem 0;
-    text-align: center;
-}
-
-.toc h2::after {
-    display: none;
+    border-bottom: 4px solid var(--color-primary);
 }
 
 .toc ul {
     list-style: none;
-    margin: 0;
     padding: 0;
     max-width: 800px;
     margin: 0 auto;
@@ -195,7 +191,7 @@ body {
 }
 
 .toc a {
-    color: #2c3e50;
+    color: var(--color-text);
     font-weight: 500;
     font-size: 1.1rem;
     text-decoration: none;
@@ -206,14 +202,14 @@ body {
 
 .toc a::before {
     content: '→ ';
-    color: #667eea;
+    color: var(--color-primary);
     font-weight: bold;
     margin-right: 0.5rem;
     transition: margin-right 0.3s ease;
 }
 
 .toc a:hover {
-    color: #667eea;
+    color: var(--color-primary);
     transform: translateX(5px);
 }
 
@@ -234,24 +230,13 @@ body {
 }
 
 .content {
-    padding: 2rem 2rem;
+    padding: 2rem;
 }
 
-.strava-ukrainian-idea {
-    padding: 1rem;
-    margin-bottom: 2rem;
-    text-align: center;
-}
-
-.strava-ukrainian-idea img {
-    border-radius: 10px;
-    margin-top: 1rem;
-    box-shadow: 0 10px 30px rgba(0,0,0,0.2);
-}
 
 h2 {
     font-size: 2rem;
-    color: #2c3e50;
+    color: var(--color-text);
     margin: 2rem 0 1.5rem 0;
     text-align: center;
     position: relative;
@@ -265,26 +250,23 @@ h2::after {
     transform: translateX(-50%);
     width: 60px;
     height: 4px;
-    background: linear-gradient(90deg, #fc4a1a, #f7b733);
+    background: linear-gradient(90deg, var(--color-accent), var(--color-accent-light));
     border-radius: 2px;
 }
 
 h3 {
     font-size: 1.8rem;
-    color: #34495e;
+    color: var(--color-text-muted);
     margin: 1.5rem 0 1rem 0;
     display: flex;
     align-items: center;
     gap: 0.5rem;
 }
 
-h3::before {
-    font-size: 1.5rem;
-}
 
 h4 {
     font-size: 1.3rem;
-    color: #e74c3c;
+    color: var(--color-danger);
     margin: 1.2rem 0 0.5rem 0;
     display: flex;
     align-items: center;
@@ -341,7 +323,7 @@ li {
 }
 
 a {
-    color: #3498db;
+    color: var(--color-link);
     text-decoration: none;
     font-weight: 500;
     transition: all 0.3s ease;
@@ -355,7 +337,7 @@ a::after {
     left: 0;
     width: 0;
     height: 2px;
-    background: linear-gradient(90deg, #3498db, #2ecc71);
+    background: linear-gradient(90deg, var(--color-link), #2ecc71);
     transition: width 0.3s ease;
 }
 
@@ -407,7 +389,7 @@ a img:hover {
     font-weight: 600;
     font-size: 1.2rem;
     margin-bottom: 1rem;
-    color: #2c3e50;
+    color: var(--color-text);
 }
 
 .settings-image {
@@ -426,25 +408,25 @@ details {
     border-radius: 10px;
     padding: 1.5rem;
     margin: 2rem 0;
-    border-left: 4px solid #e74c3c;
+    border-left: 4px solid var(--color-danger);
 }
 
 summary {
     font-weight: 600;
     cursor: pointer;
-    color: #2c3e50;
+    color: var(--color-text);
     font-size: 1.1rem;
     padding: 0.5rem 0;
     transition: color 0.3s ease;
 }
 
 summary:hover {
-    color: #e74c3c;
+    color: var(--color-danger);
 }
 
 details[open] summary {
     margin-bottom: 1rem;
-    border-bottom: 2px solid #e74c3c;
+    border-bottom: 2px solid var(--color-danger);
     padding-bottom: 0.8rem;
 }
 
@@ -490,7 +472,7 @@ details[open] summary {
 }
 
 .footer a {
-    color: #3498db;
+    color: var(--color-link);
     font-weight: 600;
 }
 
@@ -511,7 +493,7 @@ details[open] summary {
     top: 0;
     bottom: 0;
     width: 4px;
-    background: linear-gradient(180deg, #667eea 0%, #764ba2 100%);
+    background: linear-gradient(180deg, var(--color-primary) 0%, var(--color-primary-dark) 100%);
     border-radius: 2px;
 }
 
@@ -528,7 +510,7 @@ details[open] summary {
     width: 28px;
     height: 28px;
     border-radius: 50%;
-    background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+    background: linear-gradient(135deg, var(--color-primary) 0%, var(--color-primary-dark) 100%);
     border: 4px solid white;
     box-shadow: 0 4px 12px rgba(102, 126, 234, 0.4);
     z-index: 2;
@@ -545,7 +527,7 @@ details[open] summary {
     padding: 1.5rem 2rem;
     border-radius: 12px;
     box-shadow: 0 8px 25px rgba(0, 0, 0, 0.1);
-    border-left: 4px solid #667eea;
+    border-left: 4px solid var(--color-primary);
     transition: all 0.3s ease;
     position: relative;
 }
@@ -569,7 +551,7 @@ details[open] summary {
 
 .timeline-date {
     display: inline-block;
-    background: linear-gradient(135deg, #fc4a1a 0%, #f7b733 100%);
+    background: linear-gradient(135deg, var(--color-accent) 0%, var(--color-accent-light) 100%);
     color: white;
     padding: 0.4rem 1rem;
     border-radius: 20px;
@@ -579,20 +561,14 @@ details[open] summary {
     box-shadow: 0 4px 12px rgba(252, 74, 26, 0.3);
 }
 
-.timeline-content h2,
 .timeline-content h3 {
     font-size: 1.4rem;
-    color: #2c3e50;
+    color: var(--color-text);
     margin: 0.5rem 0;
     text-align: left;
     position: static;
 }
 
-.timeline-content h2::after {
-    content: none;
-}
-
-.timeline-content h2::before,
 .timeline-content h3::before {
     content: none;
 }
@@ -608,14 +584,14 @@ details[open] summary {
     display: inline-flex;
     align-items: center;
     gap: 0.3rem;
-    color: #667eea;
+    color: var(--color-primary);
     font-weight: 600;
     text-decoration: none;
     transition: all 0.3s ease;
 }
 
 .timeline-content a:hover {
-    color: #764ba2;
+    color: var(--color-primary-dark);
     gap: 0.6rem;
 }
 
@@ -680,11 +656,6 @@ cite::after {
     line-height: 1;
 }
 
-.cite {
-    font-style: italic;
-    margin: 10px 0;
-    color: #555;
-}
 
 .code-block {
     position: relative;
@@ -776,7 +747,7 @@ cite::after {
     .toc {
         grid-area: toc;
         border-bottom: none;
-        border-left: 2px solid #667eea;
+        border-left: 2px solid var(--color-primary);
     }
 
     .toc ul {
@@ -894,10 +865,6 @@ cite::after {
 
     .toc {
         padding: 1rem 1rem;
-    }
-
-    .toc h2 {
-        font-size: 1rem;
     }
 
     .toc li {
