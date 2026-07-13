@@ -952,3 +952,31 @@ cite::after {
         margin-left: 0.8rem;
     }
 }
+
+.back-to-top {
+    position: fixed;
+    bottom: 1.5rem;
+    /* 1.5rem inside the right edge of the centered 1200px .container (20px = body padding) */
+    right: calc(max((100vw - 1200px) / 2, 20px) + 1.5rem);
+    width: 3rem;
+    height: 3rem;
+    border: none;
+    border-radius: 50%;
+    background: linear-gradient(135deg, var(--color-primary) 0%, var(--color-primary-dark) 100%);
+    color: #fff;
+    font-size: 1.5rem;
+    line-height: 1;
+    cursor: pointer;
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.25);
+    transition: transform 0.2s ease, box-shadow 0.2s ease;
+    z-index: 100;
+}
+
+.back-to-top:hover {
+    transform: translateY(-2px);
+    box-shadow: 0 6px 18px rgba(0, 0, 0, 0.3);
+}
+
+.back-to-top:active {
+    transform: translateY(0);
+}

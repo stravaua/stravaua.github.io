@@ -43,3 +43,15 @@ document.addEventListener('click', function (event) {
         ok ? handleSuccess() : handleError();
     }
 });
+
+// Back-to-top button: visible after scrolling one viewport height
+const backToTop = document.querySelector('.back-to-top');
+if (backToTop) {
+    window.addEventListener('scroll', () => {
+        backToTop.hidden = window.scrollY < window.innerHeight;
+    }, { passive: true });
+
+    backToTop.addEventListener('click', () => {
+        window.scrollTo({ top: 0, behavior: 'smooth' });
+    });
+}
