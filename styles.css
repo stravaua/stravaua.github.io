@@ -651,6 +651,22 @@ details[open] summary {
     flex: 1;
 }
 
+.reel-embed {
+    margin: 1.5rem 0 0;
+    max-width: 326px;
+}
+
+.reel-embed iframe {
+    width: 100%;
+    border-radius: 8px;
+}
+
+.reel-embed figcaption {
+    margin-top: 0.5rem;
+    font-size: 0.9rem;
+    color: var(--color-text-muted);
+}
+
 .ios-image {
     flex-shrink: 0;
     width: 200px;
