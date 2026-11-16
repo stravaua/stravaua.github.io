@@ -55,3 +55,12 @@ if (backToTop) {
         window.scrollTo({ top: 0, behavior: 'smooth' });
     });
 }
+
+// Table of contents starts collapsed on phones so content is visible right away
+const tocDetails = document.querySelector('.toc-details');
+if (tocDetails && window.matchMedia('(max-width: 768px)').matches) {
+    tocDetails.open = false;
+    tocDetails.addEventListener('click', (event) => {
+        if (event.target.closest('a')) tocDetails.open = false;
+    });
+}
